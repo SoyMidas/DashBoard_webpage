@@ -1,0 +1,14 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+
+const Background = "bg-[url('/images/Main_Background.jpg')]"
+---
+
+<Layout title="Welcome to Matrix.">
+	<main class={`${Background} bg-cover bg-blend-multiply bg-repeat bg-gray-800/80
+				  w-screen h-screen z-0
+				  grid place-content-center`}>
+		<Card class="z-10"/>
+	</main>
+</Layout>

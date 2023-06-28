@@ -1,0 +1,21 @@
+---
+const { Title, Extension, Url, Config } = Astro.props
+const Icon = "images/Icon-";
+---
+
+<li class={`
+    m-5 relative grid place-content-center [&>a>img]:hover:brightness-100 w-16 h-16 rounded-full
+`}>
+    <a href={`${Url}`} target="_blank">
+        <img src={`${Icon}${Title}${Extension}`} class={`w-10 z-30 relative ${Config}
+                                                        filter brightness-0 
+                                                        transition duration-200 ease-in-out`}></img> 
+        <div class={`bg-white
+                    w-16 h-16
+                    absolute top-0 left-0
+                    rounded-full
+                    z-20
+                    `}>
+        </div>
+    </a>
+</li>

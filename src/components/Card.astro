@@ -1,0 +1,59 @@
+---
+import Nav from "./Nav.astro";
+import Button from "./Button.astro";
+const Icon = "images/Icon-";
+const Image = "images/Img-";
+const Back = "images/Bg-";
+---
+
+<main
+  class="w-[73rem] h-[50rem] p-10 border-[11px] border-cyan-600 bg-white/80 rounded-[41px] m-32 flex flex-row relative"
+>
+  <aside class="relative place-self-start h-full flex flex-col min-w-fit">
+    <img
+      src={`${Image}Banner.png`}
+      alt="banner"
+      class="w-fit rounded-3xl h-full shadow-gray-600 shadow-2xl"
+    />
+    <img
+      src={`${Image}QR-code.svg`}
+      alt="qr-code"
+      class="w-[12em] absolute place-self-start self-center m-10"
+    />
+  </aside>
+  <main class="relative h-fit m-5 top-20 w-full text-xl">
+    <Nav />
+    <div class="m-3 p-2 bg-slate-500/10 rounded-lg w-full h-96 flex flex-col place-content-between content-center">
+      <p>Encantado, me presento: <br /><br />
+        Me llaman
+        <span
+          class={`bg-gradient-to-tl bg-clip-text text-transparent from-yellow-700 to-yellow-500
+                              font-extrabold font-main text-xl
+                              `}>Midas</span
+        >
+        , soy un creador de contenido
+        <span
+          class={`text-blue-500 font-bold
+                              `}>Junior</span
+        >
+        el cual pretende ser lo más grande.</p>
+      <div class="flex flex-row justify-around mb-10">
+        <Button Name="DashBoard" 
+                Link="https://soymidas.notion.site/Online-7e6cee1bb9604d0c82b64ac35f852b6f?pvs=4"
+                />
+        <Button Name="GitHub"     
+                Link="https://github.com/SoyMidas"
+                />
+      </div>
+    </div>
+  </main>
+  <div
+    class="flex flex-row absolute text-cyan-600 left-[calc(100%_-_20rem)] top-5 m-2 w-fit place-content-baseline z-50"
+  >
+    <img src={`${Icon}Midas.svg`} alt="icon" class="w-fit -m-6" />
+    <p class="self-center font-bold font-main text-7xl tracking-tighter">
+      Midas
+    </p>
+  </div>
+</main>
+
